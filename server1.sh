@@ -1,8 +1,3 @@
-# Para montar la carpeta compartida de manera permanente, editamos el archivo /etc/fstab (con privilegios de root) y agrega la siguiente línea:
-# sudo nano /etc/fstab
-
-#en la última línea del archivo fstab agregamos
-#//servername/sharename  /media/windowsshare  cifs  username=master,password=master,iocharset=utf8,sec=ntlm  0  0
 #!/bin/bash
 #Carpeta compartida entre servidor Afanasy y nodos esclavos
 
