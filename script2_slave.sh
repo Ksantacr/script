@@ -31,29 +31,18 @@ echo -e '\nInstalar CGRU'
 sudo ./install_cgru.sh
 
 #6. Iniciar CGRU - Afanasy Keeper desde las aplicaciones de Ubuntu.
-#/bin/bash /opt/cgru/start.sh
-#python3 /opt/cgru/utilities/keeper/keep
-
 #7. Una vez iniciado CGRU-Afanasy, se debe registrar la IP del servidor
-echo '{"cgru_config":{
-  "af_servername:"'$ip'",
-  "":""
-}}' > $HOME/.cgru/config.json
-
 ### Configuracion
-##
 # Para hacer posible la renderización se deben registrar los paths del servidor en el archivo de configuración del render.
 
-read -p "Ruta completa de la carpeta compartida:" compartida
-
-read -p "ruta de carpeta compartida en servidor:" compartida_server
-
 echo '{"cgru_config":{
-"":"Created by CGRU Keeper at Wed Apr 27 14:08:14 2016",
+"":"Created by CGRU Keeper at Wed Apr 27 14:08:14 2020",
 	"af_servername":"'$ip'",
         "pathsmap":[
-             ["'$compartida'","'$compartida_server'"]
+             ["/home/master/blender/","/home/master/Desktop/"]
         ],
 "":""
-}}' > /opt/cgru/config.json
+}}' > $HOME/.cgru/config.json
 
+gnome-terminal -e '/bin/bash /opt/cgru/start.sh'
+gnome-terminal -e 'python3 /opt/cgru/utilities/keeper/keep'
