@@ -46,3 +46,6 @@ echo -e '{"cgru_config":{
 
 #/bin/bash /opt/cgru/start.sh
 #python3 /opt/cgru/utilities/keeper/keep
+
+gnome-terminal -e '/bin/bash /opt/cgru/start.sh'
+gnome-terminal -e 'python3 /opt/cgru/utilities/keeper/keep'
