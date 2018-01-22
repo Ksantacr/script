@@ -26,4 +26,4 @@ echo -e '\nsudo nano /etc/fstab'
 #en la última línea del archivo fstab agregamos
 #//servername/sharename  /media/windowsshare  cifs  username=master,password=master,iocharset=utf8,sec=ntlm  0  0
 
-echo -e "//$ip/compartido /home/afanasy/blender cifs  username=master,password=master,iocharset=utf8,sec=ntlm 0 0" | sudo tee --append /etc/fstab
+echo -e "//$ip/compartido /home/master/blender cifs username=master,password=master,iocharset=utf8,sec=ntlm 0 0" | sudo tee --append /etc/fstab
